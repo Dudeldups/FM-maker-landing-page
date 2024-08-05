@@ -39,6 +39,14 @@ export default {
         "hero-pattern": "url('/assets/images/bg-hero-squiggle.svg')",
         "footer-pattern": "url('/assets/images/bg-footer-squiggle.svg')",
       },
+
+      aspectRatio: {
+        image: "attr(width) / attr(height)",
+      },
+
+      maxWidth: {
+        page: "1190px",
+      },
     },
   },
   plugins: [],

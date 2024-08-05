@@ -22,4 +22,8 @@
   h6 {
     @apply font-extrabold text-white;
   }
+
+  img {
+    @apply h-auto aspect-image;
+  }
 }
