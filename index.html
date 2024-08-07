@@ -144,71 +144,88 @@
         </ul>
       </section>
 
-      <section class="mt-36">
-        <h2>Our pricing plans</h2>
-        <p>
-          We only make money when our creators make money. Our plans are always
-          affordable, and it’s completely free to get started.
-        </p>
-
-        <div>
-          <img
-            class=""
-            src="/assets/images/icon-free.svg"
-            alt=""
-            width="46"
-            height="46"
-            aria-hidden="true" />
-          <h3>Dip your toe</h3>
-          <p>
-            Just getting started? No problem at all! Our free plan will take you
-            a long way.
+      <section class="mt-36 lg:mt-48">
+        <div class="mx-auto px-6 text-center max-w-[28rem] md:px-10">
+          <h2 class="text-md lg:text-lg">Our pricing plans</h2>
+          <p class="mt-7">
+            We only make money when our creators make money. Our plans are
+            always affordable, and it’s completely free to get started.
           </p>
-
-          <span>Free</span>
-
-          <ul>
-            <li>Unlimited products</li>
-            <li>Basic analytics</li>
-            <li>Limited marketplace exposure</li>
-            <li>10% fee per transaction</li>
-          </ul>
         </div>
 
-        <div>
-          <img
-            class=""
-            src="/assets/images/icon-paid.svg"
-            alt=""
-            width="51"
-            height="65"
-            aria-hidden="true" />
-          <h3>Dive right in</h3>
-          <p>
-            Ready for the big time? Our paid plan will help you take your
-            business to the next level.
-          </p>
+        <div
+          class="flex flex-col gap-16 items-center mt-20 px-6 md:px-10 lg:mt-24 lg:flex-row lg:gap-8 lg:justify-center">
+          <div
+            class="pb-8 px-7 bg-blue text-white rounded-lg max-w-[27.8125rem] md:px-10">
+            <img
+              class="absolute -translate-y-1/2"
+              src="/assets/images/icon-free.svg"
+              alt=""
+              width="46"
+              height="46"
+              aria-hidden="true" />
+            <h3 class="pt-12 text-sm">Dip your toe</h3>
+            <p class="mt-4 opacity-80">
+              Just getting started? No problem at all! Our free plan will take
+              you a long way.
+            </p>
 
-          <span>$25.00</span><span>/ month</span>
+            <span class="mt-6 inline-block text-xl xs:text-2xl font-extrabold"
+              >Free</span
+            >
 
-          <ul>
-            <li>Custom domain</li>
-            <li>Advanced analytics and reports</li>
-            <li>High marketplace visibility</li>
-            <li>5% fee per transaction</li>
-          </ul>
+            <ul class="grid gap-3 mt-5 ml-4 list-image-checkmark-cyan md:ml-5">
+              <li class="pl-3">Unlimited products</li>
+              <li class="pl-3">Basic analytics</li>
+              <li class="pl-3">Limited marketplace exposure</li>
+              <li class="pl-3">10% fee per transaction</li>
+            </ul>
+          </div>
+
+          <div
+            class="pb-12 px-7 bg-cyan text-darkblue rounded-lg max-w-[27.8125rem] md:px-10">
+            <img
+              class="absolute -translate-y-1/2"
+              src="/assets/images/icon-paid.svg"
+              alt=""
+              width="51"
+              height="65"
+              aria-hidden="true" />
+            <h3 class="pt-14 text-sm text-darkblue">Dive right in</h3>
+            <p class="mt-4 mb-6 opacity-70">
+              Ready for the big time? Our paid plan will help you take your
+              business to the next level.
+            </p>
+
+            <span class="inline-block text-xl xs:text-2xl font-extrabold"
+              >$25.00</span
+            ><span class="opacity-70 inline-block -translate-y-3 ml-2"
+              >/ month</span
+            >
+
+            <ul class="grid gap-3 mt-5 ml-4 list-image-checkmark-blue md:ml-5">
+              <li class="pl-3">Custom domain</li>
+              <li class="pl-3">Advanced analytics and reports</li>
+              <li class="pl-3">High marketplace visibility</li>
+              <li class="pl-3">5% fee per transaction</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section>
-        <h2>Get notified when we launch</h2>
-        <form action="">
-          <label for="email">
-            Email
-            <input type="email" id="email" name="email" />
-          </label>
-          <button type="submit">Get notified</button>
-        </form>
+      <section class="mt-36 pb-20">
+        <div class="mx-auto max-w-[25rem]">
+          <h2 class="text-md text-center max-w-[15ch]">
+            Get notified when we launch
+          </h2>
+          <form action="" class="flex flex-col gap-6">
+            <label for="email">
+              Email
+              <input type="email" id="email" name="email" />
+            </label>
+            <button type="submit">Get notified</button>
+          </form>
+        </div>
       </section>
     </main>
 
