@@ -40,6 +40,11 @@ export default {
         "footer-pattern": "url('/assets/images/bg-footer-squiggle.svg')",
       },
 
+      listStyleImage: {
+        "checkmark-blue": "url('/assets/images/icon-check-blue.svg')",
+        "checkmark-cyan": "url('/assets/images/icon-check-cyan.svg')",
+      },
+
       aspectRatio: {
         image: "attr(width) / attr(height)",
       },
