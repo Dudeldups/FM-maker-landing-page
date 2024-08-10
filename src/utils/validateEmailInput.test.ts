@@ -9,6 +9,7 @@ describe("Email input", () => {
   let form: HTMLFormElement;
   let emailInput: HTMLInputElement;
   let submitButton: HTMLButtonElement;
+  let emailError: HTMLParagraphElement;
 
   beforeEach(() => {
     // Setup a new DOM before each test
@@ -21,7 +22,7 @@ describe("Email input", () => {
             <h2>
               Get notified when we launch
             </h2>
-            <form id="signup-form">
+            <form id="signup-form" novalidate>
               <div>
                 <label for="email">
                   Email address
@@ -52,9 +53,9 @@ describe("Email input", () => {
     submitButton = form.querySelector(
       'button[type="submit"]'
     ) as HTMLButtonElement;
+    emailError = form.querySelector("#email-error") as HTMLParagraphElement;
 
     form.addEventListener("submit", event => {
-      console.log("submit event triggered");
       event.preventDefault();
       validateEmailInput();
     });
@@ -63,54 +64,60 @@ describe("Email input", () => {
   it("should trigger submit event listener", async () => {
     const submitSpy = vitest.fn();
     form.addEventListener("submit", submitSpy);
-    console.log("Value: ", emailInput.value);
     await userEvent.type(emailInput, "invalid-email");
-    console.log("Value: ", emailInput.value);
-    console.log("Before clicking");
     await userEvent.click(submitButton);
-    console.log("After clicking");
     expect(submitSpy).toHaveBeenCalled();
   });
 
   it("should show an empty error message for valid email", async () => {
+    // Enter a valid email and submit the form
     await userEvent.type(emailInput, "valid@example.com");
     await userEvent.click(submitButton);
 
-    const emailError = form.querySelector("#email-error");
     expect(emailError).toBeInTheDocument();
     expect(emailError).toHaveTextContent("");
   });
 
   it("shows an error message for invalid email", async () => {
-    // Mocking an invalid email input
+    // Enter an invalid email and submit the form
     await userEvent.type(emailInput, "invalid-email");
-
-    console.log("Email Input Value after typing: ", emailInput.value);
-    // Submit the form
-    console.log("clicking (invalid)");
     await userEvent.click(submitButton);
-    // console.log("Directly calling validateEmailInput");
-    // validateEmailInput();
 
     // Assert that the error message is shown
-    const emailError = form.querySelector(
-      "#email-error"
-    ) as HTMLParagraphElement;
     expect(emailError).toBeInTheDocument();
     expect(emailError).toHaveTextContent("Please enter a valid email address");
   });
 
   it("shows an error message for empty email", async () => {
     // Submit the form with an empty email
-    console.log("Clicking (empty)");
     await userEvent.click(submitButton);
 
     // Assert that the error message is shown
-    const emailError = form.querySelector(
-      "#email-error"
-    ) as HTMLParagraphElement;
     expect(emailError).toBeInTheDocument();
     expect(emailError).toHaveTextContent("Email is required");
+  });
+
+  it("shows an error message for whitespace email", async () => {
+    // Submit the form with a whitespace email
+    await userEvent.type(emailInput, "   ");
+    await userEvent.click(submitButton);
+
+    // Assert that the error message is shown
+    expect(emailError).toBeInTheDocument();
+    expect(emailError).toHaveTextContent("Email is required");
+  });
+
+  it("shows an error message if the email was valid but then became invalid", async () => {
+    // Enter a valid email
+    await userEvent.type(emailInput, "valid@email.com");
+    // remove focus from input
+    emailInput.blur();
+    // Make the email invalid (remove top-level domain)
+    await userEvent.type(emailInput, "{backspace}{backspace}{backspace}");
+    // Submit the form by pressing enter
+    await userEvent.type(emailInput, "{enter}");
+    // Assert that the error message is shown
+    expect(emailError).toHaveTextContent("Please enter a valid email address");
   });
 
   afterEach(() => {

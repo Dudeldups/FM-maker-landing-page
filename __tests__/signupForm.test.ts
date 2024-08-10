@@ -26,7 +26,7 @@ describe("Signup Form", () => {
                   Email address
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   name="email" />
                 <p id="email-error" aria-live="polite"></p>
