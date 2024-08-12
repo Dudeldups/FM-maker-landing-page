@@ -212,26 +212,38 @@
         </div>
       </section>
 
-      <section class="mt-36 pb-20">
-        <div class="mx-auto px-6 md:px-10 max-w-[25rem]">
-          <h2 class="mx-auto text-md text-center mobile:max-w-[15ch]">
+      <section class="mt-36 pb-20 lg:mt-48">
+        <div class="mx-auto px-6 md:px-10 max-w-[25rem] md:max-w-[35rem]">
+          <h2
+            class="mx-auto text-md text-center mobile:max-w-[15ch] lg:text-lg">
             Get notified when we launch
           </h2>
-          <form action="" novalidate class="flex flex-col gap-6">
-            <div class="relative mt-8">
-              <label for="email" class="absolute text-white">
-                Email address
-              </label>
+          <form
+            action=""
+            novalidate
+            class="flex flex-col gap-6 mt-8 md:flex-row lg:mt-10">
+            <div class="relative flex-1">
               <input
                 type="email"
                 id="email"
                 name="email"
-                class="w-full bg-blue rounded-full p-3" />
-              <p id="email-error" aria-live="polite"></p>
+                placeholder="Email address"
+                aria-errormessage="email-error"
+                aria-invalid="false"
+                class="peer w-full font-extrabold text-white bg-blue rounded-full py-3 px-5 border-2 border-blue -outline-offset-4 transition-colors focus-visible:border-cyan placeholder:text-transparent" />
+              <label
+                for="email"
+                class="absolute -top-6 left-5 text-white font-medium transition-all peer-placeholder-shown:top-[0.8rem] peer-placeholder-shown:text-slate-300 peer-placeholder-shown:font-extrabold peer-placeholder-shown:select-none peer-placeholder-shown:pointer-events-none peer-focus-visible:-top-6 peer-focus-visible:text-white peer-focus-visible:font-medium">
+                Email address
+              </label>
+              <p
+                id="email-error"
+                aria-live="assertive"
+                class="absolute left-5 -bottom-7"></p>
             </div>
             <button
               type="submit"
-              class="w-full bg-cyan text-darkblue font-extrabold rounded-full p-3">
+              class="w-full bg-cyan text-darkblue border-2 border-cyan font-extrabold rounded-full p-3 mobile:mt-3 transition-colors -outline-offset-4 md:max-w-36 hover:bg-transparent hover:text-white focus-visible:bg-transparent focus-visible:text-white">
               Get notified
             </button>
           </form>
