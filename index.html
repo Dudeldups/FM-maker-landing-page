@@ -41,7 +41,9 @@
         <div
           class="mx-auto px-6 text-center col-span-2 max-w-[28.125rem] md:max-w-[36rem] md:bg-hero-pattern bg-contain bg-center bg-no-repeat mobile:mt-12 md:col-start-2 md:col-end-3 md:row-[1/1] md:bg-top md:py-8 lg:pt-16 lg:pb-12">
           <h1 class="text-lg lg:text-2xl xs:px-10 lg:px-0">
-            Get paid for the work you <span class="text-cyan">love</span> to do.
+            Get paid for the work you
+            <span class="animate-fade-to-cyan">love</span>
+            to do.
           </h1>
           <p class="mt-6">
             The 9-5 grind is so last century. We believe in living life on your
@@ -61,7 +63,7 @@
         <h2 class="sr-only">Your benefits with Maker</h2>
         <ul class="grid gap-14 justify-items-center lg:grid-cols-4">
           <li
-            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:ml-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:justify-start lg:gap-12">
+            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:ml-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:justify-start lg:gap-12 opacity-0 translate-x-40 lg:-translate-x-20 transition-all duration-300">
             <div
               class="flex justify-center items-center min-w-32 aspect-square bg-blue rounded-[45px] lg:min-w-40">
               <img
@@ -81,7 +83,7 @@
           </li>
 
           <li
-            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:mr-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:mt-12 lg:justify-start lg:gap-12">
+            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:mr-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:pt-12 lg:justify-start lg:gap-12 opacity-0 -translate-x-40 lg:translate-x-0 lg:translate-y-16 transition-all duration-300">
             <div
               class="flex justify-center items-center min-w-32 aspect-square bg-blue rounded-[45px] lg:min-w-40">
               <img
@@ -101,7 +103,7 @@
           </li>
 
           <li
-            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:ml-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:justify-start lg:gap-12">
+            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:ml-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:justify-start lg:gap-12 opacity-0 translate-x-40 lg:translate-x-0 lg:translate-y-16 transition-all duration-300">
             <div
               class="flex justify-center items-center min-w-32 aspect-square bg-blue rounded-[45px] lg:min-w-40">
               <img
@@ -121,7 +123,7 @@
           </li>
 
           <li
-            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:mr-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:mt-12 lg:justify-start lg:gap-12">
+            class="flex flex-col justify-center items-center gap-8 max-w-80 mobile:text-center md:flex-row md:mr-14 md:max-w-[31.25rem] lg:flex-col lg:items-start lg:mx-0 lg:pt-12 lg:justify-start lg:gap-12 opacity-0 -translate-x-40 lg:translate-x-20 transition-all duration-300">
             <div
               class="flex justify-center items-center min-w-32 aspect-square bg-blue rounded-[45px] lg:min-w-40">
               <img
@@ -142,7 +144,7 @@
         </ul>
       </section>
 
-      <section class="mt-36 lg:mt-52">
+      <section id="pricing" class="mt-36 lg:mt-52">
         <div
           class="mx-auto px-6 text-center max-w-[28rem] md:px-10 md:max-w-[70ch]">
           <h2 class="text-md lg:text-lg">Our pricing plans</h2>
@@ -155,7 +157,7 @@
         <div
           class="flex flex-col gap-16 items-center mt-20 px-6 md:px-10 lg:mt-28 lg:flex-row lg:gap-8 lg:justify-center">
           <div
-            class="pb-8 px-7 bg-blue text-white rounded-lg max-w-[27.8125rem] md:px-10">
+            class="card pb-8 px-7 bg-blue text-white rounded-lg max-w-[27.8125rem] md:px-10">
             <img
               class="absolute -translate-y-1/2"
               src="/assets/images/icon-free.svg"
@@ -182,7 +184,7 @@
           </div>
 
           <div
-            class="pb-12 px-7 bg-cyan text-darkblue rounded-lg max-w-[27.8125rem] md:px-10">
+            class="card pb-12 px-7 bg-cyan text-darkblue rounded-lg max-w-[27.8125rem] md:px-10">
             <img
               class="absolute -translate-y-1/2"
               src="/assets/images/icon-paid.svg"
@@ -196,7 +198,8 @@
               business to the next level.
             </p>
 
-            <span class="inline-block text-xl xs:text-2xl font-extrabold"
+            <span
+              class="price inline-block text-xl xs:text-2xl font-extrabold bg-gradient-to-r from-black to-slate-200 bg-[length:900%] bg-clip-text text-transparent"
               >$25.00</span
             ><span class="opacity-70 inline-block -translate-y-3 ml-2"
               >/ month</span

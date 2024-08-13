@@ -52,6 +52,58 @@ export default {
       maxWidth: {
         page: "1190px",
       },
+
+      keyframes: {
+        "fade-to-cyan": {
+          "0%": { color: "#FFF" },
+          "100%": { color: "#3EE9E5" },
+        },
+
+        wiggle: {
+          "0%": {
+            transform: "rotate(0deg) scale(1)",
+          },
+          "20%": {
+            transform: "rotate(10deg) scale(1.01)",
+          },
+          "30%": {
+            transform: "rotate(-10deg) scale(1.025)",
+          },
+          "40%": {
+            transform: "rotate(10deg) scale(1.05)",
+          },
+          "50%": {
+            transform: "rotate(-10deg) scale(1.05)",
+          },
+          "60%": {
+            transform: "rotate(10deg) scale(1.05)",
+          },
+          "70%": {
+            transform: "rotate(-10deg) scale(1.025)",
+          },
+          "85%": {
+            transform: "rotate(10deg) scale(1.01)",
+          },
+          "100%": {
+            transform: "rotate(0deg) scale(1)",
+          },
+        },
+
+        "move-gradient": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
+      },
+
+      animation: {
+        "fade-to-cyan": "fade-to-cyan 1s ease-in 1s forwards",
+        wiggle: "wiggle 1.5s ease-in-out .5s forwards",
+        "move-gradient": "move-gradient 1.25s ease-in .5s forwards",
+      },
     },
   },
   plugins: [],
