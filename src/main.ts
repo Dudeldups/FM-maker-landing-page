@@ -47,7 +47,6 @@ const priceObserver = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-100px",
     threshold: 1,
   }
 );

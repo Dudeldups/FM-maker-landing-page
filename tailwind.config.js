@@ -90,11 +90,11 @@ export default {
         },
 
         "move-gradient": {
-          "0%, 100%": {
-            backgroundPosition: "0% 50%",
+          "75%": {
+            backgroundPosition: "right center",
           },
-          "50%": {
-            backgroundPosition: "100% 50%",
+          "100%": {
+            backgroundPosition: "left center",
           },
         },
       },
@@ -102,7 +102,7 @@ export default {
       animation: {
         "fade-to-cyan": "fade-to-cyan 1s ease-in 1s forwards",
         wiggle: "wiggle 1.5s ease-in-out .5s forwards",
-        "move-gradient": "move-gradient 1.25s ease-in .5s forwards",
+        "move-gradient": "move-gradient 2s linear 1s forwards",
       },
     },
   },
